@@ -9,7 +9,7 @@ import numpy as np
 class songScraper:
     def __init__(self, cid, secret, genius_api_key):
         self.spotify = spotipy.Spotify(client_credentials_manager=SpotifyClientCredentials(client_id=cid, client_secret=secret))
-        self.genius = lyricsgenius.Genius(genius_api_key)
+        self.genius = lyricsgenius.Genius(genius_api_key, headers={'User-Agent': 'YourAppName/1.0'})
 
     def get_artists(self, genre="Rock Nacional", artist_n=5, song_n=5, market="AR", artist_popularity=15):
         offset = 1
