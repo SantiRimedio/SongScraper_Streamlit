@@ -1,0 +1,5 @@
+pandas
+spotipy
+lyricsgenius
+numpy
+streamlit
